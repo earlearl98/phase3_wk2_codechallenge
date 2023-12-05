@@ -1,4 +1,4 @@
-# models/test_models.py
+
 import unittest
 from models.customer import Customer
 from models.restaurant import Restaurant
@@ -27,10 +27,9 @@ class TestCustomerRestaurantReview(unittest.TestCase):
         self.customer1.add_review(self.restaurant1, 4)
         self.customer2.add_review(self.restaurant1, 5)
 
-        # Add this print statement
+       
         print(self.restaurant1.reviews)
 
-        # self.assertEqual(self.restaurant1.average_star_rating(), 4.5)
 
     def test_find_customer_by_name(self):
         found_customer = Customer.find_by_name("John Doe")
